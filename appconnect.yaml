@@ -35,7 +35,7 @@ spec:
         - containerPort: 7600
         env:
         - name: LICENSE
-          value: "Accept"
+          value: "accept"
         - name: MQ_QMGR_NAME
           value: "QMGR"
         - name: ACE_SERVER_NAME
