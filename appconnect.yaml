@@ -8,7 +8,7 @@ spec:
     app: appconnect
   ports:
   - protocol: TCP
-    port: 80
+    port: 7600
 
 ---
 
@@ -33,3 +33,10 @@ spec:
         image: us.gcr.io/sincere-chariot-260312/ace-dev-mq-dev@sha256:fb00747d9568852165a190192969e5389f9af83b0c1eeb7e58d98b20aa647c0b
         ports:
         - containerPort: 7600
+        env:
+        - name: LICENSE
+          value: "Accept"
+        - name: MQ_QMGR_NAME
+          value: "QMGR"
+        - name: ACE_SERVER_NAME
+          value: "ACESERVER"
