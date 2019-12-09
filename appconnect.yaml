@@ -9,7 +9,16 @@ spec:
   ports:
   - protocol: TCP
     port: 7600
-
+    targetport: 7600
+  - protocol: TCP
+    port: 7800
+    targetport: 7800
+  - protocol: TCP
+    port: 7843
+    targetport: 7843
+  - protocol: TCP
+    port: 1414
+    targetport: 1414
 ---
 
 apiVersion: apps/v1
@@ -33,6 +42,9 @@ spec:
         image: us.gcr.io/sincere-chariot-260312/ace-dev-mq-dev@sha256:fb00747d9568852165a190192969e5389f9af83b0c1eeb7e58d98b20aa647c0b
         ports:
         - containerPort: 7600
+        - containerPort: 7800
+        - containerPort: 7843
+        - containerPort: 1414
         env:
         - name: LICENSE
           value: "accept"
