@@ -9,16 +9,16 @@ spec:
   ports:
   - protocol: TCP
     port: 7600
-    targetport: 7600
+    targetPort: 7600
   - protocol: TCP
     port: 7800
-    targetport: 7800
+    targetPort: 7800
   - protocol: TCP
     port: 7843
-    targetport: 7843
+    targetPort: 7843
   - protocol: TCP
     port: 1414
-    targetport: 1414
+    targetPort: 1414
 ---
 
 apiVersion: apps/v1
