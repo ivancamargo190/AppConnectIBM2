@@ -1,0 +1,35 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: appconnect
+spec:
+  type: LoadBalancer
+  selector:
+    app: appconnect
+  ports:
+  - protocol: TCP
+    port: 80
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: appconnect
+  labels:
+    app: appconnect
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: appconnect
+  template:
+    metadata:
+      labels:
+        app: appconnect
+    spec:
+      containers:
+      - name: appconnect
+        image: us.gcr.io/sincere-chariot-260312/ace-dev-mq-dev@sha256:fb00747d9568852165a190192969e5389f9af83b0c1eeb7e58d98b20aa647c0b
+        ports:
+        - containerPort: 80
