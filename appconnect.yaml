@@ -7,16 +7,16 @@ spec:
   selector:
     app: appconnect
   ports:
-  - protocol: TCP
+  - name: admin
     port: 7600
     targetPort: 7600
-  - protocol: TCP
+  - name: adminbus
     port: 7800
     targetPort: 7800
-  - protocol: TCP
+  - name: adminbusseguro
     port: 7843
     targetPort: 7843
-  - protocol: TCP
+  - name: adminmq
     port: 1414
     targetPort: 1414
 ---
