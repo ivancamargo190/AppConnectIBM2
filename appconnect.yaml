@@ -19,7 +19,7 @@ metadata:
   labels:
     app: appconnect
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: appconnect
@@ -32,4 +32,4 @@ spec:
       - name: appconnect
         image: us.gcr.io/sincere-chariot-260312/ace-dev-mq-dev@sha256:fb00747d9568852165a190192969e5389f9af83b0c1eeb7e58d98b20aa647c0b
         ports:
-        - containerPort: 80
+        - containerPort: 7600
