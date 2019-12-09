@@ -42,13 +42,13 @@ spec:
         image: us.gcr.io/sincere-chariot-260312/ace-dev-mq-dev@sha256:fb00747d9568852165a190192969e5389f9af83b0c1eeb7e58d98b20aa647c0b
         ports:
         - containerPort: 7600
-          name: x
+          name: xaaa
         - containerPort: 7800
-          name: y
+          name: yeee
         - containerPort: 7843
-          name: z
+          name: ziii
         - containerPort: 1414
-          name: a
+          name: aooo
         env:
         - name: LICENSE
           value: "accept"
