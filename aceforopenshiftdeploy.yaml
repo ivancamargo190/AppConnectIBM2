@@ -34,5 +34,7 @@ spec:
           value: "QMGR"
         - name: ACE_SERVER_NAME
           value: "ACESERVER"
+       - securityContext:
+           privileged: true
         #command: ["echo"]
         #args: ["$(LICENSE) $(MQ_QMGR_NAME) $(ACE_SERVER_NAME)"]
