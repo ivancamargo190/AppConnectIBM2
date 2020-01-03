@@ -5,6 +5,7 @@ metadata:
   labels:
     app: appconnect
 spec:
+  serviceAccount: juanjosecamargo
   replicas: 1
   selector:
     matchLabels:
@@ -14,26 +15,24 @@ spec:
       labels:
         app: appconnect
     spec:
-      serviceAccount: juanjosecamargo
       containers:
-        spec:
-          - name: appconnect
-            image: us.gcr.io/sincere-chariot-260312/ace-dev-mq-dev@sha256:fb00747d9568852165a190192969e5389f9af83b0c1eeb7e58d98b20aa647c0b
-            ports:
-          - containerPort: 7600
-            name: xaaa
-          - containerPort: 7800
-            name: yeee
-          - containerPort: 7843
-            name: ziii
-          - containerPort: 1414
-            name: aooo
-            env:
-          - name: LICENSE
-            value: "accept"
-          - name: MQ_QMGR_NAME
-            value: "QMGR"
-          - name: ACE_SERVER_NAME
-            value: "ACESERVER"
+      - name: appconnect
+        image: us.gcr.io/sincere-chariot-260312/ace-dev-mq-dev@sha256:fb00747d9568852165a190192969e5389f9af83b0c1eeb7e58d98b20aa647c0b
+        ports:
+        - containerPort: 7600
+          name: xaaa
+        - containerPort: 7800
+          name: yeee
+        - containerPort: 7843
+          name: ziii
+        - containerPort: 1414
+          name: aooo
+        env:
+        - name: LICENSE
+          value: "accept"
+        - name: MQ_QMGR_NAME
+          value: "QMGR"
+        - name: ACE_SERVER_NAME
+          value: "ACESERVER"
         #command: ["echo"]
         #args: ["$(LICENSE) $(MQ_QMGR_NAME) $(ACE_SERVER_NAME)"]
