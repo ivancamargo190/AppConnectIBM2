@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: appconnectv2
+  name: appconnect
   labels:
-    app: appconnectv2
+    app: appconnect
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: appconnectv2
+      app: appconnect
   template:
     metadata:
       labels:
-        app: appconnectv2
+        app: appconnect
     spec:
-      serviceAccount: juanjosecamargo
+      serviceAccount: thanos
       containers:
-      - name: appconnectv2
+      - name: appconnect
         image: gcr.io/sincere-chariot-260312/davivienda@sha256:e114b64d91eb58a771cf69a3027f49156015ddff97fb94bf52c5d91a486118bb
         ports:
         - containerPort: 7600
