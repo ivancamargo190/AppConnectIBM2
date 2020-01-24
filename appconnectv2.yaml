@@ -39,7 +39,7 @@ spec:
     spec:
       containers:
       - name: appconnect
-        image: us.gcr.io/sincere-chariot-260312/ace-dev-mq-dev@sha256:fb00747d9568852165a190192969e5389f9af83b0c1eeb7e58d98b20aa647c0b
+        image: gcr.io/sincere-chariot-260312/davivienda@sha256:e114b64d91eb58a771cf69a3027f49156015ddff97fb94bf52c5d91a486118bb
         ports:
         - containerPort: 7600
           name: xaaa
